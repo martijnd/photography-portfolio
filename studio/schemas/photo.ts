@@ -11,6 +11,15 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
@@ -22,7 +31,9 @@ export default defineType({
       type: 'datetime',
     }),
   ],
-
+  initialValue: () => ({
+    publishedAt: new Date().toISOString(),
+  }),
   preview: {
     select: {
       title: 'title',

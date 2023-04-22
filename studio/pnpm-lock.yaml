@@ -2414,7 +2414,7 @@ packages:
       '@sanity/color': 2.2.5
       '@sanity/icons': 2.3.1_react@18.2.0
       '@sanity/ui': 1.3.2_naxdq4ftv6hnbklxoymdh4kece
-      '@uiw/react-codemirror': 4.19.16_rza2rtjacqn2lshcrwal253aie
+      '@uiw/react-codemirror': 4.19.16_a56xzdisaqoxkr67oj6remczme
       hashlru: 2.3.0
       is-hotkey: 0.1.8
       json5: 2.2.3
@@ -2687,8 +2687,14 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: true
 
-  /@uiw/codemirror-extensions-basic-setup/4.19.16:
+  /@uiw/codemirror-extensions-basic-setup/4.19.16_mrzhwivgr2wygywn2jmgfwoweq:
     resolution: {integrity: sha512-Xm0RDpyYVZ/8hWqaBs3+wZwi4uLwZUBwp/uCt89X80FeR6mr3BFuC+a+gcDO4dBu3l+WQE3jJdhjKjB2TCY/PQ==}
+    peerDependencies:
+      '@codemirror/autocomplete': '>=6.0.0'
+      '@codemirror/commands': '>=6.0.0'
+      '@codemirror/language': '>=6.0.0'
+      '@codemirror/search': '>=6.0.0'
+      '@codemirror/view': '>=6.0.0'
     dependencies:
       '@codemirror/autocomplete': 6.5.1
       '@codemirror/commands': 6.2.3
@@ -2699,7 +2705,7 @@ packages:
       '@codemirror/view': 6.9.6
     dev: false
 
-  /@uiw/react-codemirror/4.19.16_rza2rtjacqn2lshcrwal253aie:
+  /@uiw/react-codemirror/4.19.16_a56xzdisaqoxkr67oj6remczme:
     resolution: {integrity: sha512-uElraR7Mvwz2oZKrmtF5hmIB8dAlIiU65nfg484e/V9k4PV6/5KtPUQL3JPO4clH2pcd+TQqRTQrFFkP/D25ew==}
     peerDependencies:
       '@codemirror/view': '>=6.0.0'
@@ -2711,10 +2717,14 @@ packages:
       '@codemirror/state': 6.2.0
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.9.6
-      '@uiw/codemirror-extensions-basic-setup': 4.19.16
+      '@uiw/codemirror-extensions-basic-setup': 4.19.16_mrzhwivgr2wygywn2jmgfwoweq
       codemirror: 6.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    transitivePeerDependencies:
+      - '@codemirror/autocomplete'
+      - '@codemirror/language'
+      - '@codemirror/search'
     dev: false
 
   /@vercel/error-utils/1.0.9:
