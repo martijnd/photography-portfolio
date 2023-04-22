@@ -23,7 +23,7 @@ export default function Home({ categories }: { categories: Category[] }) {
   return (
     <BaseLayout>
       <h1>Portfolio website</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid gap-4 md:grid-cols-3">
         {categories.map((category) => (
           <Link
             href={`/categories/${category.title.toLowerCase()}`}

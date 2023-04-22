@@ -36,11 +36,10 @@ export default function Category({
     photos: Photo[];
   };
 }) {
-  console.log(category);
   return (
     <BaseLayout>
       <h1>{category.title}</h1>
-      <div className="grid grid-cols-3">
+      <div className="grid md:grid-cols-3">
         {category.photos.map((photo) => (
           <Image
             key={photo.url}
