@@ -21,9 +21,7 @@ interface Category {
 export default function Home({ categories }: { categories: Category[] }) {
   return (
     <BaseLayout>
-      <h1 className="py-12 text-center text-3xl text-slate-900">
-        Portfolio website
-      </h1>
+      <h1 className="py-12 text-center text-3xl text-slate-900">Portfolio</h1>
       <div className="grid gap-4 md:grid-cols-3">
         {categories.map((category) => (
           <Link

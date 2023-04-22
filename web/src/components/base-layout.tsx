@@ -23,9 +23,10 @@ export default function BaseLayout({
 function NavBar() {
   return (
     <div className="mx-10 flex justify-between py-8">
-      <h3>Martijn Dorsman Photography</h3>
+      <Link href="/">
+        <h3>Martijn Dorsman Photography</h3>
+      </Link>
       <div className="space-x-4">
-        <Link href="/">Home</Link>
         <Link href="/contact">Contact</Link>
       </div>
     </div>
