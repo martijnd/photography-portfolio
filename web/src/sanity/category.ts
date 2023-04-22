@@ -48,6 +48,7 @@ export async function getCategoryPhotosBySlug(slug: string) {
       title, 
       slug, 
       "photos": *[_type == 'photo' && references(^._id)] {
+        title,
         image {
           asset -> {
             url,
@@ -95,6 +96,7 @@ export async function getCategoryPhotosBySlug(slug: string) {
         height: cover_image.image.asset.metadata.dimensions.height,
       },
       photos: photos.map((photo) => ({
+        title: photo.title,
         url: photo.image.asset.url,
         width: photo.image.asset.metadata.dimensions.width,
         height: photo.image.asset.metadata.dimensions.height,

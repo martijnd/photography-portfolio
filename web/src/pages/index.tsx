@@ -18,20 +18,21 @@ interface Category {
     height: number;
   };
 }
-
 export default function Home({ categories }: { categories: Category[] }) {
   return (
     <BaseLayout>
-      <h1>Portfolio website</h1>
+      <h1 className="py-12 text-center text-3xl text-slate-900">
+        Portfolio website
+      </h1>
       <div className="grid gap-4 md:grid-cols-3">
         {categories.map((category) => (
           <Link
             href={`/categories/${category.title.toLowerCase()}`}
-            className="group relative grid place-items-center overflow-hidden rounded transition-transform hover:scale-110"
+            className="group relative grid place-items-center overflow-hidden rounded transition-transform duration-300 hover:scale-110"
             key={category.cover_image.url}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/60"></div>
+              <div className="group-hover:bg-black/duration-300 absolute inset-0 bg-black/20 transition-colors duration-500 group-hover:bg-black/60"></div>
               <Image
                 alt={category.title}
                 src={category.cover_image.url + "?w=1920&h=1080&fit=crop&q=100"}
@@ -39,7 +40,7 @@ export default function Home({ categories }: { categories: Category[] }) {
                 height={1000}
               />
             </div>
-            <h2 className="absolute text-2xl font-bold text-white ">
+            <h2 className="absolute text-2xl font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {category.title}
             </h2>
           </Link>
