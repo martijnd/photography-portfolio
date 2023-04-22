@@ -44,7 +44,7 @@ export default function Category({
       <h1 className="py-12 text-center text-3xl text-slate-900">
         {category.title}
       </h1>
-      <div className="grid md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-3">
         {category.photos.map((photo, index) => (
           <button
             key={photo.url}
